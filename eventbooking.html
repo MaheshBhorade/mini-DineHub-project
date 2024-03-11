@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Event Booking</title>
+  <style>
+    body {
+  background-image: url('book.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+   *{
+        color: aliceblue;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      
+      
+    background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color:transparent;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="datetime-local"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Restaurant Event Booking</h1>
+  <div class="form-container">
+  <form action="connect.php" method="post">
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" required><br>
+
+    <label for="eventtype">Type of Event:</label><br>
+    <select id="eventtype" name="eventtype" required>
+      <option value="Birthday">Birthday</option>
+      <option value="Corporate">Corporate</option>
+      <option value="Anniversary">Anniversary</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <label for="datetime">Date and Time:</label><br>
+    <input type="datetime-local" id="datetime" name="datetime" required><br>
+
+    <label for="guests">Number of Guests:</label><br>
+    <input type="number" id="guests" name="guests" required><br>
+
+    <label for="foodpref">Food Preferences:</label><br>
+    <input type="checkbox" id="vegetarian" name="foodpref" value="Vegetarian">
+    <label for="vegetarian">Vegetarian</label><br>
+    <input type="checkbox" id="vegan" name="foodpref" value="Vegan">
+    <label for="vegan">Vegan</label><br>
+    <input type="checkbox" id="glutenfree" name="foodpref" value="Gluten-free">
+    <label for="glutenfree">Gluten-free</label><br>
+
+    <label for="specialreq">Special Requests:</label><br>
+    <textarea id="specialreq" name="specialreq"></textarea><br>
+
+    <input type="submit" value="Submit" name="submit">
+  </form>
+</div>
+
+</body>
+</html>
+
